@@ -1,1 +1,4 @@
 # practice
+ * Git
+ * JavaScript
+ * JQuery
