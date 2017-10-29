@@ -16,13 +16,12 @@
 
   @keyframes Flash3 {
     50% {
-      text-shadow: 1px 1px 0 red;
-      box-shadow: 0 1px 15px 0 blue;
-      background: greenyellow;
+      box-shadow: 0 1px 15px 0 red;
+      background: rgba(54, 7, 7, 0.747);
     }
   }
 
-  div.box{
+  div.box {
     width: 200px;
     height: 200px;
     background: blue;
@@ -30,18 +29,35 @@
   }
 </style>
 
-<div class="flash3" style="background: green;">緑だよ</div>
+<script language="JavaScript">
+  window.onload = function windowFullScreen() {
+    if (this.webkitRequestFullScreen) {
+      this.webkitRequestFullScreen();
+    }
+    else if (this.mozRequestFullScreen) {
+      this.mozRequestFullScreen();
+    }
+    else {
+      alert("not found")
+    }
+  };
+</script>
 
-<p class="flash3">text-decoration: blink;は非推奨</p>
+<body>
+  <div class="flash3" style="background: green;">緑だよ</div>
 
-<script type="text/javascript" src="./test.js"></script>
+  <p class="flash3">danger</p>
 
-<p style="font-family: 'Teko', sans-serif;">Remain</p>
-<p>Remain</p>
+  <script type="text/javascript" src="./test.js"></script>
 
-<p style="font-family: 'Teko', sans-serif;">Information</p>
-<p>Information</p>
+  <p style="font-family: 'Teko', sans-serif;">Remain</p>
+  <p>Remain</p>
 
-<p>HTML文の解析を続行</p>
+  <p style="font-family: 'Teko', sans-serif;">Information</p>
+  <p>Information</p>
+
+  <p>HTML文の解析を続行</p>
+
+</body>
 
 </html>
